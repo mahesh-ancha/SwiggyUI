@@ -20,4 +20,12 @@ registerUser(user:Array<String>)
     Password : user[5]
   },{responseType:'text'});
 }
+
+loginUser(loginInfo: Array<String>)
+{
+  return this.http.post(this.baseurl+'Login/loginUser',{
+    Email: loginInfo[0],
+    Password : loginInfo[1]
+  },{responseType: 'text'});
+}
 }
