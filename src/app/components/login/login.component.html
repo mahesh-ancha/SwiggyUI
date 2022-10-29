@@ -2,7 +2,7 @@
     {{displayMsg}}</p>
 
 
-<form class="border p-3 rounded-3" [formGroup]="loginform" (ngSubmit)="loginSubmitted()">
+<form [formGroup]="loginform" (ngSubmit)="loginSubmitted()" class="border p-3 rounded-3" >
     <div class="row g-0">
         <div class="col text-center bg-light p-2 mb-3">
                 <span class="ps-3">Login</span>

@@ -30,16 +30,15 @@ export class LoginComponent implements OnInit {
       this.loginAuth.loginUser([
         this.loginform.value.email!,
         this.loginform.value.password!
-      ]
-        ).subscribe((res) =>{
-            if(res=='Success')
+      ]).subscribe((res) =>{
+            if(res=='Failure')
             {
               this.isUserValid=false;
-             this.displayMsg= "Login Unsuccessful";
+             alert('Login Unsuccessful');
             }
             else{
               this.isUserValid=true;
-              this.displayMsg= "Login Successful";
+              alert('Login Successful');
             }
           });
   }
