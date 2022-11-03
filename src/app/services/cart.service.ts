@@ -17,8 +17,8 @@ export class CartService {
   {
     return this.http.get<Cart[]>(this.baseUrl+'api/cart')
   }
-  AddCart(id : Cart["cartId"]) : Observable<Cart["cartId"]>
+ /* AddCart(id : Cart["cartId"]) : Observable<Cart["cartId"]>
   {
     return this.http.post<Cart["cartId"]>(this.baseUrl+'api/cart',id);
-  }
+  } */
 }

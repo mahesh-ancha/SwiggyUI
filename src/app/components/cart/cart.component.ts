@@ -37,7 +37,7 @@ this.cartservice.GetAllCartItems()
   }
 )
 
-AddToCart()
+/* AddToCart()
 {
 this.cartservice.AddCart(this.cartr.cartId).subscribe(
   {
@@ -50,7 +50,7 @@ this.cartservice.AddCart(this.cartr.cartId).subscribe(
       console.log(response);
     }
   }
-)}
+)} */
   };
   
 }

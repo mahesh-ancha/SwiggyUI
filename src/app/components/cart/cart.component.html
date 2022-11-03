@@ -4,15 +4,12 @@
         <div class="row">
             <div class="col-lg-3" *ngFor="let p of cart">
                 <div class="box">
-                    <img src="{{p.img}}"width="100%">
-                    <ul>
-
-                    
-                    <li>    <h4>{{p.productId}} {{p.productName}}</h4> </li>
+                    <div class="row"> <img  src="{{p.img}}"width="100%"> </div>
+                    <h4>{{p.productId}} {{p.productName}}</h4>
                     <h4>{{p.category}}</h4>
                     <h4>{{p.quantity}}</h4>
                     <p>{{p.price  | currency:'INR'}}</p>
-                    </ul>
+                    
                     <a class="buybtn" [routerLink]="['/Orders']">Buy Now &nbsp;<i class="bi bi-bag"></i></a>
                 </div>
             </div>
