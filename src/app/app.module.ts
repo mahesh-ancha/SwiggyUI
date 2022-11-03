@@ -10,6 +10,9 @@ import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './components/login/login.component';
 import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
 import { HomeComponent } from './components/home/home.component';
+import { ProductsComponent } from './components/products/products.component';
+import { CartComponent } from './components/cart/cart.component';
+import { OrdersComponent } from './components/orders/orders.component';
 
 
 @NgModule({
@@ -18,7 +21,10 @@ import { HomeComponent } from './components/home/home.component';
     RegisterComponent,
     LoginComponent,
     PagenotfoundComponent,
-    HomeComponent
+    HomeComponent,
+    ProductsComponent,
+    CartComponent,
+    OrdersComponent
   ],
   imports: [
     BrowserModule,
