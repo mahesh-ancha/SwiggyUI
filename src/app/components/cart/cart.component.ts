@@ -11,6 +11,7 @@ import { Cart } from 'src/app/models/cart.model';
 export class CartComponent implements OnInit {
   id:any;
   cart:any;
+  cart2= this.cartservice.GetAllCartItems();
   product :Cart = {
     productName : '',
     category : '',
@@ -20,6 +21,8 @@ export class CartComponent implements OnInit {
     price: 0
   };
   cartr!: Cart ;
+
+  items = this.cartservice.GetItems();
   constructor(private cartservice: CartService) { }
 
   ngOnInit(): void {
@@ -36,6 +39,8 @@ this.cartservice.GetAllCartItems()
     }
   }
 )
+
+//this.cartservice.AddCart(this.items);
 
 /* AddToCart()
 {

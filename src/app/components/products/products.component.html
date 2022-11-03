@@ -14,7 +14,7 @@
                     <p>{{p.price  | currency:'INR'}}</p>
                     </ul>
                     <a class="buybtn" [routerLink]="['/Orders']">Buy Now &nbsp;<i class="bi bi-bag"></i></a>
-                    <button class="btn btn-primary" (click)="AddToCart(p.productId)"> <span ></span> Cart</button>
+                    <button class="btn btn-primary" (click)="AddToCart(p)"> <span ></span> Cart</button>
                 </div>
             </div>
         </div>

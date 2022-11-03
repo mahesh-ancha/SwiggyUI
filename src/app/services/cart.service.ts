@@ -9,6 +9,16 @@ import { Products } from '../models/Products.model';
   providedIn: 'root'
 })
 export class CartService {
+  cart2:any;
+  items : Products[] =[];
+  cart : Cart ={
+    productName: '',
+    cartId: 0,
+    img: '',
+    category: '',
+    quantity: 0,
+    price: 0
+  }
 
   baseUrl : string =environment.baseApiUrl;
   constructor( private http: HttpClient) { }
@@ -21,4 +31,22 @@ export class CartService {
   {
     return this.http.post<Cart["cartId"]>(this.baseUrl+'api/cart',id);
   } */
+  AddtoCart(product : Products)
+{
+  this.items.push(product);
+}
+GetItems()
+{
+  return this.items;
+}
+ClearItems()
+{
+  this.items=[];
+  return this.items;
+}
+AddCart(id :Products)
+  {
+   return this.http.post(this.baseUrl+'api/cart/',id,{responseType : "text"});
+    
+  }
 }

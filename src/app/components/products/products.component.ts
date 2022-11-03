@@ -12,10 +12,12 @@ export class ProductsComponent implements OnInit {
   products : any;
   cart : any;
   idd:any;
+  iddd: Products["productId"] =1;
 
   constructor(private productsService : ProductsService,private cartService : CartService) { }
 
   ngOnInit(): void {
+    
     this.productsService.GetAllProducts()
     .subscribe({
       next:(products)=>{
@@ -27,25 +29,35 @@ export class ProductsComponent implements OnInit {
         console.log(response);
       }
     });
-
   }
-  AddToCart(id : number)
+  
+  AddToCart(product :Products )
   {
-this.productsService.AddCart(id)
-    .subscribe({
-      next:(cart) => {
-        this.cart = cart;
-        console.log(cart);
-        console.log(id);
+this.cartService.AddCart(product)
+    .subscribe({ 
+       next: (res)=>{
+        this.cart=res;
+       
+     
       },
       error:(respons) => {
-        console.log(id);
+        console.log(product);
         console.log(respons);
       }
     })
 
   
+  } 
+
+  addToCart(product : Products)
+  {
+    return this.cartService.AddtoCart(product);
+    alert("Added to cart");
   }
+
 }
 
+function AddToCart(id: any) {
+  throw new Error('Function not implemented.');
+}
 
